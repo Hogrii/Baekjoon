@@ -7,6 +7,6 @@ public class Ex8 {
 		int B;
 		A = sc.nextInt();
 		B = sc.nextInt();
-		System.out.println((double)A/B);
+		System.out.println((double)A/B);  
 	}
 }
