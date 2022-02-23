@@ -15,9 +15,8 @@ public class Ex4 {
             int A = Integer.parseInt(br.readLine());
             int B = Integer.parseInt(br.readLine());
             bw.write((A+B)+"\n");
-        }
-        
-        bw.flush();
+            bw.flush();
+        }        
         bw.close();
     }
 }
