@@ -8,6 +8,13 @@ public class Ex3 {
 		int C = sc.nextInt();
 		int multiply = A*B*C;
 		String str = Integer.toString(multiply);
-
+		int[] result = new int[10];
+		
+		for(int i=0; i<str.length(); i++) {
+			result[Character.getNumericValue(str.charAt(i))]++;
+		}
+		for(int i=0; i<result.length; i++) {
+			System.out.println(result[i]);
+		}
 	}
 }
