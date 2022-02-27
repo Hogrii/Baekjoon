@@ -13,12 +13,9 @@ public class Ex7 {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-<<<<<<< HEAD
 		int A = sc.nextInt();
 		int B = sc.nextInt();
-=======
->>>>>>> 7bd61e5892933963f7776c1d52b7c06d095b8658
-		
+
 		A = d(A);
 		B = d(B);
 		
