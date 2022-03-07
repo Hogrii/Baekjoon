@@ -1,70 +1,63 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Ex4 {
-	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int M = Integer.parseInt(st.nextToken());	
-		int N = Integer.parseInt(st.nextToken());
-		int inputNum = M;
-		int moduleCount = 0;
-		int[] numbers = new int[N-M+1];
-		
-		for(int i=0; i<N-M+1; i++) {
-			numbers[i] = inputNum;
-			inputNum++;
-		}
-		
-		for(int i=0; i<N-M+1; i++) {
-			for(int j=1; j<numbers[i]+1; j++) {
-				if(numbers[i]==1) {
-					continue;
-				}else {
-					if(numbers[i]%j == 0) {
-						moduleCount++;
-					}
-				}
+	public static boolean[] prime;
+	
+	// 에라토스테네스의 체
+	public static void get_prime() {
+		// 0과 1은 소수에서 제외
+		prime[0] = prime[1] = true;
+		// Max Number인 N의 제곱근과 같거나 작은 수의 배수를 제거
+		for(int i=2; i<=Math.sqrt(prime.length); i++) {
+			// prime[i] == true
+			if(prime[i]) {
+				continue;
 			}
-			if(moduleCount==2) {
-				moduleCount = 0;
-				System.out.println(numbers[i]);
-			}else {
-				moduleCount = 0;
+			for(int j=i*i; j<prime.length; j+=i) {
+				prime[j] = true;
+			}
+		}
+	}
+	public static void main(String[] args) throws Exception{
+		Scanner sc = new Scanner(System.in);
+		int M = sc.nextInt();
+		int N = sc.nextInt();
+		
+		prime = new boolean[N+1];
+		get_prime();
+		
+		for(int i=M; i<=N; i++) {
+			// prime[i] == false
+			if(!prime[i]) {
+				System.out.println(i);
 			}
 		}
 	}
 }
 
 /*
-Scanner sc = new Scanner(System.in);
-int M = sc.nextInt();
-int N = sc.nextInt();
-int inputNum = M;
-int moduleCount = 0;
-int[] numbers = new int[N-M+1];
-
-for(int i=0; i<N-M+1; i++) {
-	numbers[i] = inputNum;
-	inputNum++;
-}
-
-for(int i=0; i<N-M+1; i++) {
-	for(int j=1; j<numbers[i]+1; j++) {
-		if(numbers[i]==1) {
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+StringTokenizer st = new StringTokenizer(br.readLine());
+int M = Integer.parseInt(st.nextToken());	
+int N = Integer.parseInt(st.nextToken());
+		
+boolean notPrime [] = new boolean[N+1];
+notPrime[0] = notPrime[1] = true;
+		
+int sqrt = (int)Math.sqrt(N);
+System.out.println("sqrt : " + sqrt);
+for(int i=2; i<sqrt; i++) {
+	for(int j=2; j<=N/i; j++) {
+		if(notPrime[i*j] == true) {
 			continue;
 		}else {
-			if(numbers[i]%j == 0) {
-				moduleCount++;
-			}
+			notPrime[i*j] = true;
 		}
 	}
-	if(moduleCount==2) {
-		moduleCount = 0;
-		System.out.println(numbers[i]);
-	}else {
-		moduleCount = 0;
+}
+for(int i=M; i<=N; i++) {
+	if(notPrime[i] == false) {
+		System.out.println(i);
 	}
 }
 */
