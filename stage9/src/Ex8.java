@@ -36,6 +36,5 @@ public class Ex8 {
 		}else if(countX==1 && countY==1){
 			System.out.println(x + " " + y);
 		}
-		
 	}
 }
