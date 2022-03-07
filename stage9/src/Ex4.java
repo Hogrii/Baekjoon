@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Ex4 {
-	public static boolean[] prime;
-	
+	public static boolean[] prime;	
 	// 에라토스테네스의 체
 	public static void get_prime() {
 		// 0과 1은 소수에서 제외
@@ -13,15 +12,17 @@ public class Ex4 {
 			if(prime[i]) {
 				continue;
 			}
+			// i의 제곱수부터 i의 배수에 해당하는 값들을 제거
 			for(int j=i*i; j<prime.length; j+=i) {
 				prime[j] = true;
 			}
 		}
 	}
+	
 	public static void main(String[] args) throws Exception{
 		Scanner sc = new Scanner(System.in);
-		int M = sc.nextInt();
-		int N = sc.nextInt();
+		int M = sc.nextInt(); // 10
+		int N = sc.nextInt(); // 20
 		
 		prime = new boolean[N+1];
 		get_prime();
