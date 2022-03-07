@@ -28,10 +28,9 @@ public class Ex5 {
 			for (int i=N+1; i<=2*N; i++) {
 				if (!prime[i]) {
 					count++;
-					System.out.println(i);
 				}					
 			}
-			System.out.println("소수의 개수 : " + count);
+			System.out.println(count);
 			count = 0;
 		}
 	}

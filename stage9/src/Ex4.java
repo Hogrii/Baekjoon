@@ -21,8 +21,8 @@ public class Ex4 {
 	
 	public static void main(String[] args) throws Exception{
 		Scanner sc = new Scanner(System.in);
-		int M = sc.nextInt(); // 10
-		int N = sc.nextInt(); // 20
+		int M = sc.nextInt();
+		int N = sc.nextInt();
 		
 		prime = new boolean[N+1];
 		get_prime();
