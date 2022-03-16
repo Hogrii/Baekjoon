@@ -7,26 +7,26 @@ public class Ex3 {
 			arr[x][y] = '*';
 			return;
 		}
-		n = n/3;
+		int starPoint = n/3;
 		
 		for(int i=0; i<3; i++) {
 			for(int j=0; j<3; j++) {
 				if(i==1&&j==1) {
 					continue;
 				}else {
-					star(n, x+(n*i), y+(n*j));
+					star(starPoint, x+(starPoint*i), y+(starPoint*j));
 				}
 			}
 		}
 	}
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int n = sc.nextInt();
+		int n = sc.nextInt();		
 		arr = new char[n][n];
-				
+			
 		star(n, 0, 0);
+		
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n; j++) {
 				System.out.print(arr[i][j]);
