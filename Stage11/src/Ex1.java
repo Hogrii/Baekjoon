@@ -27,9 +27,11 @@ public class Ex1 {
 				// 세번째 카드는 두번째 카드보다 크고 N을 넘지 않는다.
 				for(int k=j+1; k<N; k++) {
 					int sum = arr[i] + arr[j] + arr[k];
+					// 합이 M과 같은 경우
 					if(sum == M) {
 						return sum;
 					}
+					// 합이 이전 합보다 크고 M보다 작은 경우
 					if(result<sum && sum<M) {
 						result = sum;
 					}
