@@ -15,6 +15,7 @@ public class Ex3 {
 		}
 		
 		for(int i=0; i<N; i++) {
+			// ·©Å· °ª
 			int rank = 1;
 			for(int j=0; j<N; j++) {
 				if(i==j) continue;
@@ -23,6 +24,7 @@ public class Ex3 {
 					rank++;
 				}
 			}
+			// ·©Å· ÀÔ·Â
 			ranking[i] = rank;
 		}
 		
