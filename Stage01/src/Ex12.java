@@ -13,5 +13,5 @@ public class Ex12 {
 		System.out.println(((A%C)+(B%C))%C);
 		System.out.println((A*B)%C);
 		System.out.println(((A%C)*(B%C))%C);		
-	}
+	} 
 }

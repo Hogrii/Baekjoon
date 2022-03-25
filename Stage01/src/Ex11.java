@@ -7,4 +7,4 @@ public class Ex11 {
 		y = sc.nextInt();
 		System.out.println(y-543);
 	}
-}
+} 
