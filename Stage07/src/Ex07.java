@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex7 {
+public class Ex07 {
 	public static int d(int num) {
 	
 		int result = 0;

@@ -20,7 +20,7 @@ public class Ex10 {
 			}
 		}
 		return true;
-	}
+	} 
 	
 	public static void main(String[] args) { 
 		int N = Integer.parseInt(sc.nextLine());
