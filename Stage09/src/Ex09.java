@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ex9 {
+public class Ex09 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		

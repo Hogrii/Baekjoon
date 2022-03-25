@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex4 {
+public class Ex04 {
 	public static boolean[] prime;	
 	// 에라토스테네스의 체
 	public static void get_prime() {

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex6 {
+public class Ex06 {
 	public static boolean[] prime = new boolean[10001];
 	public static void get_prime() {
 		prime[0] = prime[1] = true;
