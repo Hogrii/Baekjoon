@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 
-public class Ex4 {
+public class Ex04 {
 	public static void main(String[] args) throws IOException{
 		// BufferedReader는 Scanner 대신에 입력을 받을 수 있다.
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
