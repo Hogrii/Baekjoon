@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex1 {
+public class Ex01 {
 	public static long sum(int[] a) {
 		long sum = 0;
 		for(int i=0; i<a.length; i++) {

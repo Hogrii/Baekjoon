@@ -1,4 +1,4 @@
-public class Ex2 {	
+public class Ex02 {	
 	// 셀프넘버 메소드
 	public static int d(int i) {
 		int sum = i;

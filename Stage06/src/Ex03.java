@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex3 {
+public class Ex03 {
 	public static int x(int N) {
 		
 		int count = 0;
