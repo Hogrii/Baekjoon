@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex3 {
+public class Ex03 {
 	public static char[][] arr;
 	public static void star(int n, int x, int y) {
 		if(n==1) {
