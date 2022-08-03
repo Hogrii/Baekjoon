@@ -13,19 +13,13 @@ public class Ex07 {
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 		
-		// 분자
-		int numerator = 1;
-		// 분모
-		int denominator = 1;
-		
-		for(int i=N; i>N-K; i--) {
-			numerator = numerator * i;
+		System.out.println(factorial(N)/(factorial(N-K)*factorial(K)));
+	}
+	
+public static int factorial(int N) {
+		if(N<=1) {
+			return 1;
 		}
-		
-		for(int i=K; i>1; i--) { 
-			denominator = denominator * i;
-		}
-		
-		System.out.println(numerator/denominator);
+		return N*factorial(N-1);
 	}
 }
