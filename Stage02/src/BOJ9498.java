@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex02 {
+public class BOJ9498 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int score;

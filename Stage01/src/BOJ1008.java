@@ -1,18 +1,12 @@
 import java.util.Scanner;
 
-public class Ex01 {
+public class BOJ1008 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int A;
 		int B;
 		A = sc.nextInt();
 		B = sc.nextInt();
-		if(A>B) {
-			System.out.println(">");
-		}else if(A<B) {
-			System.out.println("<");
-		}else {
-			System.out.println("==");
-		}
+		System.out.println((double)A/B);
 	}
 }
