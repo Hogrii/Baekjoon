@@ -6,29 +6,43 @@ import java.util.StringTokenizer;
 public class BOJ2563 {
 	public static void main(String[] args) throws IOException{
 		// 색종이
+		// 1. 가로, 세로 100칸짜리 배열을 만든다.
+		// 2. 각 색종이의 영역을 색칠한다.
+		// 3. 색칠된 영역을 출력한다.
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 		
-		int paper = Integer.parseInt(br.readLine());
-		int[][] area = new int[100][100];
-		int cnt = 0;
+		// 가로, 세로 100칸 도화지
+		int[][] whitePaper = new int[100][100];
 		
-		for(int i=0; i<paper; i++) {
+		// 색종이 수
+		int N = Integer.parseInt(br.readLine());
+		
+		// 색종이로 가려진 영역
+		int covered = 0;
+		
+		// 색종이 영역 구하기
+		for(int i=0; i<N; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
+			// 색종이 x좌표
 			int x = Integer.parseInt(st.nextToken());
+			// 색종이 y좌표
 			int y = Integer.parseInt(st.nextToken());
 			
 			for(int j=x; j<x+10; j++) {
 				for(int k=y; k<y+10; k++) {
-					if(area[j][k] != 1) {
-						area[j][k] = 1;
-						cnt++;
-//						System.out.println(j + " " + k);
+					// 색종이의 영역이 아닐 때
+					if(whitePaper[j][k] != 1) {
+						// 영역 추가
+						whitePaper[j][k] = 1;
+						// 영역 카운트
+						covered++;
 					}
 				}
 			}
 		}
-		System.out.println(cnt);
+		// 출력
+		System.out.println(covered);
 	}
 }
