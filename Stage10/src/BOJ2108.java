@@ -7,6 +7,8 @@ import java.util.Arrays;
 public class BOJ2108 {
 	public static void main(String[] args) throws IOException{
 		// 통계학
+		// 실패
+		
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
